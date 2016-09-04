@@ -1,0 +1,25 @@
+<html ng-app="demo">
+    <head>
+        
+        <link rel="stylesheet" href="style/main.css"/>
+
+        <!-- build:css style/external.css -->
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
+        <!-- endbuild -->
+        
+        <link rel="icon" type="image/jpeg" href="/app/images/favicon.png">
+    </head>
+    <body>
+        <div ng-view=""></div>
+
+        <!-- build:js(..) app/main.js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js"></script>
+        
+        <script src="app/app.js"></script>
+        <script src="app/scripts/services/MyService.js"></script>
+        <script src="app/scripts/controllers/BoardPageCtrl.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

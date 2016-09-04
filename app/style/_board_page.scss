@@ -1,0 +1,77 @@
+#board-page{
+  $BOARD_BACKGROUND_COLOR: #5BA4CF;
+  $BOARD_PAGE_PADDING:0px;
+  $BOARD_CONTENT_PADDING:20px;
+  
+  $LIST_BACKGROUND_COLOR: #D2D7E5;
+
+  $ADD_TICKET_BACKGROUND_COLOR:linear-gradient(to bottom,#61BD4F 0,#5AAC44 100%);
+  
+  $PLACEHOLDER_COLOR:rgba(0,0,0,0.5);
+  
+  background:$BOARD_BACKGROUND_COLOR;
+  padding:$BOARD_CONTENT_PADDING;
+  position:absolute;
+  overflow-x:auto;
+  white-space: nowrap;
+  max-height:100%;
+
+  top:$BOARD_PAGE_PADDING;
+  bottom:$BOARD_PAGE_PADDING;
+  left:$BOARD_PAGE_PADDING;
+  right:$BOARD_PAGE_PADDING;
+  
+  
+  li.dndPlaceholder{
+    height:60px;
+    list-style:none;
+    background: $PLACEHOLDER_COLOR;
+    margin-top:10px;
+  }
+  
+  .list{
+    vertical-align: top;
+    background:$LIST_BACKGROUND_COLOR;
+    width:300px;
+    display:inline-block;
+    padding:10px;
+    .list-content {
+      max-height: 80%;
+      overflow-y: auto;
+      $SCROLL_OFFSET:5px;
+      padding-right:$SCROLL_OFFSET;
+      margin-right:-$SCROLL_OFFSET;
+      padding-bottom:60px;
+      margin-bottom:20px;
+    }
+    &:not(:first-child){
+      margin-left:10px;  
+    }
+    .list-name{
+      padding:10px;
+      border:none;
+      background:transparent;
+    }
+    
+    .add-ticket{
+      background:$ADD_TICKET_BACKGROUND_COLOR;
+      color:white;
+      font-weight: bold;
+      border:none;
+      padding:10px;
+      
+    }
+    
+    .ticket{
+      background:white;
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+      .ticket-title{
+        width:100%;
+        padding:20px;
+      }
+    }
+    
+  }
+}

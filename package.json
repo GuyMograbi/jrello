@@ -1,0 +1,88 @@
+{
+  "name": "easy-nodejs-setup",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "npm-run-all --parallel server sass:watch",
+    "test": "standard && npm run karma:once && npm run mocha:once",
+    "watch": "npm-watch",
+    "standard": "standard",
+    "standard:watch" : "nodemon --exec 'npm run standard --silent'",
+    "server": "nodemon server.js --ignore app/",
+    "server:dist": "cd dist && nodemon server.js",
+    "sass:once": "node-sass app/style/main.scss .tmp/style/main.css",
+    "sass:watch": "npm run sass:once --silent && node-sass app/style/main.scss .tmp/style/main.css -w",
+    "karma:once": "karma start --single-run --coverage",
+    "karma:watch": "karma start",
+    "karma:start": "npm run karma:watch",
+    "mocha:once": "istanbul cover _mocha test/backend/**/*.spec.js",
+    "mocha:watch": "mocha -w test/backend/**/*.spec.js",
+    "ng-annotate": "npm-ng-annotate -i **/*.js,!node_modules/**,!bower_components/**,!test/**,!karma.conf.js,!server.js,!backend/**",
+    "usemin": "usemin .tmp/annotated/index.html -d dist -o dist/index.html",
+    "build": "npm-run-all build:*",
+    "build:clean": "rimraf .tmp dist coverage",
+    "build:make-dist": "mkdirp dist",
+    "build:sass": "npm run sass:once && mkdirp dist/style &&  cp .tmp/style/*.css dist/style/ && copy app/style/images/**/* dist/style/images/",
+    "build:ng-annotate": "npm run ng-annotate",
+    "build:copy-tmp": "cp -R index.html .tmp/annotated && cp -R bower_components .tmp/annotated",
+    "build:usemin": "npm run usemin",
+    "build:copy-fonts": "cp -R bower_components/font-awesome/fonts dist",
+    "build:copy-backend": "copyfiles server.js package.json backend/**/* dist",
+    "build:npm-install-dist": "cd dist && bundle-dependencies update && npm install --production",
+    "build:npm-pack": "cd dist && npm pack",
+    "postinstall": "bower install",
+    "documentation" : "markserv"
+  },
+  "watch": {
+    "standard": {
+      
+      "patterns": [
+        "."
+      ],
+      "extensions": "js",
+      "quiet": true
+    }
+  },
+  "standard": {
+    "globals": [
+      "angular",
+      "describe",
+      "it",
+      "expect"
+    ]
+  },
+  "dependencies": {
+    "bower": "^1.7.9",
+    "connect-livereload": "^0.5.4",
+    "express": "^4.14.0",
+    "lite-server": "^2.2.2",
+    "livereload": "^0.4.1",
+    "markserv": "0.0.18",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "bundle-dependencies": "^1.0.2",
+    "copy": "^0.2.3",
+    "copyfiles": "^1.0.0",
+    "expect.js": "^0.3.1",
+    "istanbul": "^0.4.4",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.0.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.0.0",
+    "karma-failed-reporter": "0.0.3",
+    "karma-jasmine": "^1.0.2",
+    "karma-jasmine-html-reporter": "^0.2.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^2.5.3",
+    "ng-annotate": "^1.2.1",
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.9.2",
+    "npm-ng-annotate": "0.0.1",
+    "npm-run-all": "^2.2.2",
+    "npm-watch": "^0.1.4",
+    "rimraf": "^2.5.2",
+    "standard": "^7.1.2",
+    "usemin-cli": "0.0.8"
+  }
+}

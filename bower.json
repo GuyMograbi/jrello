@@ -1,0 +1,10 @@
+{
+  "name": "easy-nodejs-setup",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "angularjs#~1.5.7",
+    "font-awesome": "~4.6.3",
+    "angular-route": "~1.5.8",
+    "angular-drag-and-drop-lists": "~1.4.0"
+  }
+}

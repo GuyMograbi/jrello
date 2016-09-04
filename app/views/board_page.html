@@ -1,0 +1,28 @@
+<div id="board-page" ng-dblclick="addList()">
+    <div ng-repeat="list in lists" class="list">
+        <input class="list-name" ng-model="list.name"/>
+        <div class="list-content" dnd-list="list.tickets">
+            <div ng-repeat="ticket in list.tickets" class="ticket" 
+                 dnd-draggable="ticket"
+                 dnd-dragstart="list.tickets.splice($index, 1)"
+                 dnd-effect-allowed="move">
+                <input class="ticket-title" ng-model="ticket.title"/>
+            </div>
+        </div>
+        <button class="add-ticket" ng-click="addTicket(list)">
+            Add Ticket
+        </button>
+    </div>
+</div>
+
+
+<!--<ul dnd-list="list">-->
+    <!--<li ng-repeat="item in list"-->
+        <!--dnd-draggable="item"-->
+        <!--dnd-effect-allowed="move"-->
+        <!--dnd-moved="list.splice($index, 1)"-->
+        <!--dnd-selected="models.selected = item"-->
+        <!--ng-class="{selected: models.selected === item}"-->
+        <!--ng-include="item.type + '.html'">-->
+    <!--</li>-->
+<!--</ul>-->
