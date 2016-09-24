@@ -9,7 +9,43 @@ As inspiration, lets use Trello since it is very powerful yet simple.
 For the purpose of this article we will simplify it further.       
 
 
-The stack I will use is the MEAN stack - Mongo, Express, Angular and Nodejs. 
+The stack I will use is the MEAN stack - Mongo, Express, Angular and Nodejs.    
+The MEAN stack has no particular advantage over other technologies.         
+So picking this technology is simply my personal taste.  
+Here are some reasons that make me like these technologies: 
+
+ - Nodejs
+    - It has a great dependency mechanism. It is relative rather than global - both in file system and path. 
+      This means:  
+        - You can have multiple versions of the same code in one project - which makes dependencies much more stable. 
+        - You can easily pack your code 'to go'. 
+        - It is very easy to publish your code to use - micro library.     
+          This in turn means there's a lot of code out there you can use for Nodejs.   
+          It also means you can easily separate your code to small libraries.   
+        - Combines with nvm (Node Version Manager) you can easily have multiple node version on your computer. 
+    - It has a great stack of utilities for the development environment.
+       - nodemon and lite-server auto refresh your process once code changes which accelerates your development process - remember there's no compilation!
+       - bower organizes your frontend dependencies (and I still like it even though npm can replace it :) )
+       - npm scripts is a very powerful way to add functionality to your development environment
+       
+       I find it very useful to have Nodejs in any project - never mind the language.
+    - It is light. I like the fact I can run Nodejs on a micro machine in Amazon.    
+    - It is asynchronous by nature. This makes it a very suitable technology for the web as web servers.
+    - Combines with [Electron](http://electron.atom.io/) we can easily publish a native client to our app.
+     
+ - Express is a very straight forward library that helps organize your server's code.
+ - Mongo plays very well with Nodejs and its schemaless nature makes development very easy - especially when you start a project. 
+ - Angular 
+    - It is a complete framework for the frontend. No need to integrate multiple libraries.
+    - I think it barely has any learning curve - I never understood those who said otherwise. 
+    - It separates HTML from JavaScript, which I like.
+ - They are all JavaScript. 
+     - JavaScript is awesome 
+       - It is a scripting language and so you see results right after writing the code.  
+       - Its runs on engines written by the biggest companies and used by everyone using a browser.
+     - One language for all environments. 
+    
+    
 To get things started, I use [a scaffold project](https://github.com/coder-on-deck/nodejs-easy-setup) that includes a basic angular setup and a backend.
  
 
@@ -535,9 +571,15 @@ All the code above gets us to some initial results
 
 As you can see, I was not joking when I said that Trello will be my inspiration.   
 
+To recap all we've done so far
+
+ - We wrote the first page for our Trello like application 
+ - We added style to the page
+ - We added the ability to add lists and tickets. 
+ - We added Drag and Drop ability. 
+
 The following steps will include adding persistancy and stepping toward collaboration.   
 I invite you to a live session on October 10th to see those next steps implemented live!
 
 
-
-
+<link rel="stylesheet" href="writing-your-own-ticketing-system/custom.css">

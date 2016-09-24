@@ -1,0 +1,9 @@
+body{
+    width:100%; 
+    border:none;
+}
+
+.markdown-body pre{
+    /*background-color: black;*/
+    border:20px solid #f7f7f7
+}
