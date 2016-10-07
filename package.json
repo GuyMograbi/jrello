@@ -1,5 +1,5 @@
 {
-  "name": "easy-nodejs-setup",
+  "name": "jrello",
   "version": "0.0.0",
   "scripts": {
     "start": "npm-run-all --parallel server sass:watch",
