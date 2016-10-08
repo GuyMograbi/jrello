@@ -14,8 +14,4 @@ router.get('/', function (req, res) {
   res.redirect('/index.html')
 })
 
-router.get('/name', function (req, res) {
-  res.send('world')
-})
-
 module.exports = router

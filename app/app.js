@@ -1,4 +1,4 @@
-angular.module('demo', ['ngRoute', 'dndLists']).config(function ($routeProvider) {
+angular.module('jrello', ['ngRoute', 'dndLists', 'ngWebsocket']).config(function ($routeProvider) {
   console.log('configuring')
 
   $routeProvider

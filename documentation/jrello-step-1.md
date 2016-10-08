@@ -1,5 +1,5 @@
 
-Write Your Own Ticketing System
+Write Jrello - A Trello Clone
 ================================
 
 This tutorial shows how to write a Trello like ticketing system startup from scratch.   

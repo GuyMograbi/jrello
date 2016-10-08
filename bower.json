@@ -5,6 +5,10 @@
     "angular": "angularjs#~1.5.7",
     "font-awesome": "~4.6.3",
     "angular-route": "~1.5.8",
-    "angular-drag-and-drop-lists": "~1.4.0"
+    "angular-drag-and-drop-lists": "~1.4.0",
+    "ng-websocket": "~0.2.1"
+  },
+  "resolutions": {
+    "angular": "~1.5.7"
   }
 }
