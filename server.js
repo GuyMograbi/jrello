@@ -10,7 +10,11 @@ var _ = require('lodash')
 
 lrServer.watch('./app/')
 
-app.use(morgan('combined'))
+app.use(morgan('combined',{
+  skip: function(req, res){
+    return req.url.indexOf('browser-sync') >= 0
+  }
+}))
 app.use(require('connect-livereload')({
   port: 35729
 }))

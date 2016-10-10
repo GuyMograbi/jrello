@@ -2,13 +2,15 @@
 
  - [ ] Add backend endpoint to save the data 
    - [ ] add mongo. 
-   - [ ] add the endpoints
-   - [ ] add a middleware to get the board
-   - [ ] use the endpoint from the frontend
+   - [X] add the endpoints
+   - [X] add a middleware to get the board
+   - [X] use the endpoint from the frontend
+   - [ ] Talk about the time assumption - that the connection is ready soon enough and possible solutions
+   - [ ] Talk about AbstractModule and DbService options. 
  - [ ] broadcast the changes back to the frontend
-   - [ ] open a websocket
-   - [ ] manage updates in frontend
-   - [ ] manage sockets and updates in the backend
+   - [X] open a websocket
+   - [X] manage updates in frontend
+   - [X] manage sockets and updates in the backend
    - [ ] talk about the problem with distributed system
      - [ ] talk about sticky load balancing - http://socket.io/docs/using-multiple-nodes/
      - [ ] talk about mongo events - https://www.npmjs.com/package/mongo-watch

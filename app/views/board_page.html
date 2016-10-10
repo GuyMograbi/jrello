@@ -1,5 +1,5 @@
 <div id="board-page" ng-dblclick="addList()">
-    <div ng-repeat="list in lists track by $index" class="list">
+    <div ng-repeat="list in board.lists track by $index" class="list">
         <input class="list-name" ng-trim="false" ng-model="list.name"/>
         <div class="list-content" dnd-list="list.tickets">
             <div ng-repeat="ticket in list.tickets track by $index" class="ticket" 

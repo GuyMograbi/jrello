@@ -6,7 +6,8 @@
     "font-awesome": "~4.6.3",
     "angular-route": "~1.5.8",
     "angular-drag-and-drop-lists": "~1.4.0",
-    "ng-websocket": "~0.2.1"
+    "ng-websocket": "~0.2.1",
+    "lodash": "~4.16.4"
   },
   "resolutions": {
     "angular": "~1.5.7"
